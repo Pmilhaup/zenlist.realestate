@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What's Your North Shore Home Really Worth? | ZenList Private Valuation</title>
+    <meta name="description" content="Zillow only sees public MLS. ZenList's valuation includes 2,400+ private and off-market sales. The only home valuation built on the data your home is actually worth against. Free for homeowners.">
+    <meta name="keywords" content="home valuation north shore, what is my house worth winnetka, home value lake forest, private home valuation, zestimate alternative, off-market comps, home worth wilmette, kenilworth home valuation, glencoe house value, highland park home worth, lake bluff home valuation, accurate home valuation chicago north shore">
+
+    <meta property="og:title" content="What's Your Home Really Worth? · ZenList Private Valuation">
+    <meta property="og:description" content="The only North Shore home valuation that includes private and off-market sales. Free for homeowners.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenlist.realestate/home-value.html">
+    <meta property="og:site_name" content="ZenList North Shore">
+
+    <link rel="canonical" href="https://zenlist.realestate/home-value.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-622008092"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-622008092');
+    </script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --z-dark: #18232F;
+    --z-darker: #0F1923;
+    --z-navy: #1A2B3F;
+    --z-blue: #2563EB;
+    --z-blue-hover: #3B82F6;
+    --z-cyan: #06B6D4;
+    --z-green: #22C55E;
+    --z-amber: #F59E0B;
+    --z-red: #EF4444;
+    --z-white: #FFFFFF;
+    --z-cream: #F8FAFC;
+    --z-surface: #ECEEF4;
+    --z-text: #1E293B;
+    --z-text-light: #64748B;
+    --z-text-muted: #94A3B8;
+    --z-border: #E2E8F0;
+}
+
+html, body {
+    background: var(--z-darker);
+    color: var(--z-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* ═══════════════ NAV ═══════════════ */
+.nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 24px;
+    background: linear-gradient(180deg, rgba(15,25,35,0.92) 0%, rgba(15,25,35,0) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+.nav.scrolled {
+    background: rgba(15, 25, 35, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 14px 24px;
+}
+.nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 18px;
+    color: var(--z-white); text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-logo-mark {
+    width: 28px; height: 28px;
+    background: var(--z-blue);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800;
+    font-size: 14px;
+}
+.nav-cta {
+    font-family: inherit;
+    font-size: 13px; font-weight: 600;
+    color: var(--z-white);
+    background: var(--z-blue);
+    border: none; border-radius: 999px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--z-blue-hover); transform: translateY(-1px); }
+
+/* ═══════════════ HERO ═══════════════ */
+.hero {
+    min-height: 100vh; min-height: 100dvh;
+    background:
+        radial-gradient(80% 60% at 50% 0%, rgba(37, 99, 235, 0.18) 0%, transparent 50%),
+        radial-gradient(60% 40% at 80% 30%, rgba(6, 182, 212, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, var(--z-darker) 0%, var(--z-dark) 100%);
+    padding: 140px 24px 80px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+@media (min-width: 960px) {
+    .hero-inner { grid-template-columns: 1.15fr 1fr; gap: 64px; }
+}
+.hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px;
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid rgba(6, 182, 212, 0.30);
+    border-radius: 999px;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--z-cyan);
+    margin-bottom: 22px;
+}
+.hero-eyebrow::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--z-cyan); border-radius: 50%;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.8);
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 6.5vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    color: var(--z-white);
+    margin-bottom: 24px;
+    text-wrap: balance;
+}
+.hero h1 em {
+    font-style: italic;
+    color: var(--z-cyan);
+    font-weight: 500;
+}
+.hero-sub {
+    font-size: clamp(17px, 2.1vw, 21px);
+    line-height: 1.55;
+    color: #CBD5E1;
+    margin-bottom: 32px;
+    max-width: 560px;
+}
+.hero-sub strong { color: var(--z-white); font-weight: 500; }
+
+.trust-row {
+    display: flex; flex-wrap: wrap; gap: 22px;
+    margin-top: 28px;
+    font-size: 13px; color: #94A3B8;
+}
+.trust-item { display: flex; align-items: center; gap: 8px; }
+.trust-check {
+    width: 18px; height: 18px;
+    background: rgba(34, 197, 94, 0.18);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--z-green);
+    font-size: 11px; font-weight: 800;
+}
+
+/* ═══════════════ HERO FORM CARD ═══════════════ */
+.hero-form-card {
+    background: rgba(15, 25, 35, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.40);
+    position: relative;
+}
+.hero-form-card::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 24px; right: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--z-cyan), transparent);
+}
+.hero-form-label {
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--z-cyan);
+    margin-bottom: 8px;
+}
+.hero-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 500;
+    color: var(--z-white);
+    margin-bottom: 22px;
+    letter-spacing: -0.008em;
+}
+.field {
+    margin-bottom: 14px;
+}
+.field-label {
+    font-size: 12px; font-weight: 500;
+    color: #94A3B8;
+    margin-bottom: 6px;
+    display: block;
+}
+.field input, .field select {
+    width: 100%;
+    padding: 13px 16px;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+    color: var(--z-white);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+.field input::placeholder, .field select::placeholder { color: #64748B; }
+.field input:focus, .field select:focus {
+    border-color: var(--z-blue);
+    background: rgba(30, 41, 59, 0.85);
+}
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.form-submit {
+    width: 100%;
+    padding: 16px;
+    font-family: inherit;
+    font-size: 15px; font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--z-white);
+    background: linear-gradient(135deg, var(--z-blue) 0%, #1E40AF 100%);
+    border: none; border-radius: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    transition: all 0.25s;
+}
+.form-submit:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.50);
+    background: linear-gradient(135deg, var(--z-blue-hover) 0%, var(--z-blue) 100%);
+}
+.form-submit:disabled { opacity: 0.6; cursor: wait; }
+.form-fineprint {
+    margin-top: 14px;
+    font-size: 11px;
+    color: var(--z-text-muted);
+    text-align: center;
+    line-height: 1.6;
+}
+.form-success {
+    display: none;
+    text-align: center;
+    padding: 30px 0;
+}
+.form-success.shown { display: block; }
+.form-success-icon {
+    width: 64px; height: 64px;
+    background: rgba(34, 197, 94, 0.18);
+    border: 2px solid var(--z-green);
+    border-radius: 50%;
+    color: var(--z-green);
+    font-size: 32px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+}
+.form-success h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--z-white);
+    margin-bottom: 8px;
+    letter-spacing: -0.008em;
+}
+.form-success p {
+    color: #CBD5E1;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* ═══════════════ SECTIONS ═══════════════ */
+section.block {
+    padding: 96px 24px;
+    position: relative;
+}
+.block-inner { max-width: 1100px; margin: 0 auto; }
+.block-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--z-cyan);
+    margin-bottom: 14px;
+}
+.block h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.018em;
+    color: var(--z-white);
+    margin-bottom: 22px;
+    text-wrap: balance;
+}
+.block h2 em {
+    font-style: italic;
+    color: var(--z-cyan);
+    font-weight: 500;
+}
+.block p.lede {
+    font-size: clamp(16px, 1.9vw, 19px);
+    line-height: 1.6;
+    color: #CBD5E1;
+    max-width: 720px;
+    margin-bottom: 32px;
+}
+
+/* The Problem block */
+.problem-block { background: var(--z-dark); }
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 36px;
+}
+@media (min-width: 760px) {
+    .problem-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.problem-card {
+    padding: 28px 26px;
+    background: rgba(30, 41, 59, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+}
+.problem-stat {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px; font-weight: 600;
+    color: var(--z-amber);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+}
+.problem-stat sup { font-size: 0.55em; vertical-align: 0.5em; color: rgba(245, 158, 11, 0.7); }
+.problem-title {
+    font-size: 18px; font-weight: 600;
+    color: var(--z-white);
+    margin-bottom: 8px;
+}
+.problem-text {
+    font-size: 14px;
+    color: #94A3B8;
+    line-height: 1.55;
+}
+
+/* The Data block */
+.data-block {
+    background: linear-gradient(180deg, var(--z-dark) 0%, var(--z-darker) 100%);
+}
+.data-callout {
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    border-left: 3px solid var(--z-cyan);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin: 28px 0 36px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--z-white);
+}
+.data-callout b { color: var(--z-cyan); font-weight: 600; }
+.data-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 28px;
+}
+@media (min-width: 600px) { .data-stats { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .data-stats { grid-template-columns: repeat(4, 1fr); } }
+.data-stat {
+    padding: 22px 22px;
+    background: rgba(15, 25, 35, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 2px solid var(--z-cyan);
+    border-radius: 8px;
+}
+.data-stat .lbl {
+    font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--z-cyan);
+    margin-bottom: 8px; display: block;
+}
+.data-stat .val {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--z-white);
+    line-height: 1;
+    letter-spacing: -0.012em;
+}
+.data-stat .val sup { font-size: 0.5em; color: var(--z-cyan); vertical-align: 0.55em; }
+.data-stat .delta {
+    font-size: 11.5px; color: #94A3B8;
+    margin-top: 6px; display: block;
+}
+
+/* How It Works block */
+.hiw-block { background: var(--z-darker); }
+.hiw-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    margin-top: 36px;
+}
+@media (min-width: 760px) { .hiw-steps { grid-template-columns: repeat(3, 1fr); } }
+.hiw-step {
+    position: relative;
+    padding: 32px 28px 28px;
+    background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 25, 35, 0.4) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+}
+.hiw-num {
+    position: absolute;
+    top: -16px; left: 24px;
+    width: 36px; height: 36px;
+    background: var(--z-blue);
+    color: white; font-weight: 800; font-size: 14px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+}
+.hiw-h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: var(--z-white);
+    margin: 10px 0 10px;
+    letter-spacing: -0.005em;
+}
+.hiw-text {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #94A3B8;
+}
+
+/* Closing CTA */
+.closer-block {
+    background: linear-gradient(180deg, var(--z-darker) 0%, #060B12 100%);
+    text-align: center;
+}
+.closer-block .block-inner { max-width: 640px; }
+.closer-block h2 { margin-bottom: 18px; }
+.closer-form-card {
+    margin-top: 36px;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: left;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Footer */
+footer.foot {
+    padding: 40px 24px 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: #060B12;
+    text-align: center;
+}
+.foot-inner { max-width: 800px; margin: 0 auto; }
+.foot-mark {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 17px;
+    color: var(--z-white);
+    margin-bottom: 18px;
+}
+.foot-mark .nav-logo-mark { width: 24px; height: 24px; font-size: 12px; }
+.foot-text {
+    font-size: 13px;
+    color: var(--z-text-muted);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+.foot-legal {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 11px;
+    color: #475569;
+}
+.foot-legal a { color: #64748B; text-decoration: none; margin: 0 8px; }
+.foot-legal a:hover { color: var(--z-white); }
+
+/* Reveal animation */
+.reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="/">
+            <span class="nav-logo-mark">Z</span>
+            ZenList
+        </a>
+        <a href="#get-valuation" class="nav-cta">Get My Valuation</a>
+    </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <div class="hero-eyebrow reveal">For North Shore Homeowners</div>
+            <h1 class="reveal" style="transition-delay:0.05s;">What's your home<br>worth — <em>really</em>?</h1>
+            <p class="hero-sub reveal" style="transition-delay:0.10s;">
+                Zillow only sees public MLS listings. ZenList's valuation tool includes <strong>2,400+ private and off-market sales</strong>
+                that never hit a public site — the comparable transactions your home is actually worth against.
+            </p>
+            <p class="hero-sub reveal" style="transition-delay:0.15s;">
+                The only home valuation built on the data your North Shore property is really competing with. Free for homeowners.
+            </p>
+            <div class="trust-row reveal" style="transition-delay:0.20s;">
+                <div class="trust-item"><span class="trust-check">✓</span> Updated every 2 minutes</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Private + off-market comps</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Free for homeowners</div>
+            </div>
+        </div>
+
+        <!-- HERO FORM CARD -->
+        <div class="hero-form-card reveal" style="transition-delay:0.25s;" id="get-valuation">
+            <div class="hero-form-label">Step 1 of 1</div>
+            <div class="hero-form-title">Get your private valuation</div>
+
+            <form id="hv-form" onsubmit="handleValuation(event)">
+                <div class="field">
+                    <label class="field-label" for="hv-address">Property address</label>
+                    <input type="text" id="hv-address" name="property_address" placeholder="123 Whitmore Court, Lake Forest, IL" required>
+                </div>
+                <div class="field-row">
+                    <div class="field">
+                        <label class="field-label" for="hv-first">First name</label>
+                        <input type="text" id="hv-first" name="first_name" placeholder="Jane" required>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="hv-last">Last name</label>
+                        <input type="text" id="hv-last" name="last_name" placeholder="Smith" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="field-label" for="hv-email">Email</label>
+                    <input type="email" id="hv-email" name="email" placeholder="jane@example.com" required>
+                </div>
+                <div class="field">
+                    <label class="field-label" for="hv-phone">Mobile</label>
+                    <input type="tel" id="hv-phone" name="phone" placeholder="(847) 555-0100" required>
+                </div>
+                <div class="field">
+                    <label class="field-label" for="hv-status">Where are you in the process?</label>
+                    <select id="hv-status" name="status" required>
+                        <option value="" disabled selected>Select one</option>
+                        <option value="just_curious">Just curious about my home's value</option>
+                        <option value="thinking_about_selling">Thinking about selling in the next 6-12 months</option>
+                        <option value="actively_planning">Actively planning to sell soon</option>
+                        <option value="refinancing">Refinancing or estate planning</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Get My Private Valuation →</button>
+                <div class="form-fineprint">
+                    Free for homeowners · Free ZenList subscription required to view full valuation · No spam · Unsubscribe anytime
+                </div>
+            </form>
+
+            <div class="form-success" id="hv-success">
+                <div class="form-success-icon">✓</div>
+                <h3>Your valuation is being built.</h3>
+                <p>Check your phone in the next few minutes — we'll text you a link to your private ZenList account where your full valuation will be ready.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ THE PROBLEM ═══════════════ -->
+<section class="block problem-block">
+    <div class="block-inner">
+        <div class="block-eyebrow reveal">Why most valuations miss the mark</div>
+        <h2 class="reveal" style="transition-delay:0.05s;">The Zestimate is built on a partial picture.<br><em>Yours shouldn't be.</em></h2>
+        <p class="lede reveal" style="transition-delay:0.10s;">
+            Zillow, Redfin, and Realtor.com calculate your home's value using only public MLS sales — the listings everyone can see.
+            On Chicago's North Shore, that's <strong style="color:var(--z-white)">a fraction of what's actually trading</strong>.
+            The private comps your home is truly competing against never show up in their data. That's why their numbers are off — and often by a lot.
+        </p>
+
+        <div class="problem-grid">
+            <div class="problem-card reveal" style="transition-delay:0.15s;">
+                <div class="problem-stat">~30<sup>%</sup></div>
+                <div class="problem-title">of North Shore luxury sales are private</div>
+                <div class="problem-text">Off-market, pocket listings, and pre-MLS deals account for nearly a third of trades in Lake Forest, Winnetka, and Kenilworth — completely invisible to Zillow.</div>
+            </div>
+            <div class="problem-card reveal" style="transition-delay:0.20s;">
+                <div class="problem-stat">$<span data-count="78">0</span>K</div>
+                <div class="problem-title">average Zestimate error in your zip code</div>
+                <div class="problem-text">On a typical $1.8M Lake Forest home, the Zestimate is off by tens of thousands of dollars — sometimes hundreds — because it can't see the private comps.</div>
+            </div>
+            <div class="problem-card reveal" style="transition-delay:0.25s;">
+                <div class="problem-stat"><span data-count="201">0</span></div>
+                <div class="problem-title">luxury sales in Lake Forest last 12 months</div>
+                <div class="problem-text">$398M traded across Lake Forest luxury alone in the trailing twelve. The data set under your home's true value is huge — if you can see it.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ THE DATA ═══════════════ -->
+<section class="block data-block">
+    <div class="block-inner">
+        <div class="block-eyebrow reveal">The Lake Forest market just turned</div>
+        <h2 class="reveal" style="transition-delay:0.05s;">Sellers crossed <em>100% of ask</em><br>for the first time in five years.</h2>
+        <p class="lede reveal" style="transition-delay:0.10s;">
+            Across April and May 2026, the average Lake Forest luxury home closed at <strong style="color:var(--z-cyan)">101.9% of original list price</strong> &mdash;
+            the first two-month stretch above 100% since the post-pandemic peak of summer 2022. Homeowners who price correctly today are clearing the market and beating their ask.
+            But you can't price correctly if your valuation is missing 30% of the comps.
+        </p>
+
+        <div class="data-callout reveal" style="transition-delay:0.15s;">
+            If you're pricing off a Zestimate, you're probably leaving <b>4-8% on the table</b>. On a $2M home, that's $80,000 to $160,000.
+            The ZenList valuation includes the private sales that show what your home is really worth — and what you should really ask.
+        </div>
+
+        <div class="data-stats">
+            <div class="data-stat reveal" style="transition-delay:0.20s;">
+                <span class="lbl">Apr-May 2026 SP/LP</span>
+                <div class="val"><span data-count="101.9">0</span><sup>%</sup></div>
+                <span class="delta">First above 100% in 5 years</span>
+            </div>
+            <div class="data-stat reveal" style="transition-delay:0.25s;">
+                <span class="lbl">TTM Volume</span>
+                <div class="val">$<span data-count="398">0</span><sup>M</sup></div>
+                <span class="delta">+39% YoY</span>
+            </div>
+            <div class="data-stat reveal" style="transition-delay:0.30s;">
+                <span class="lbl">TTM Closings</span>
+                <div class="val"><span data-count="201">0</span></div>
+                <span class="delta">+30% YoY</span>
+            </div>
+            <div class="data-stat reveal" style="transition-delay:0.35s;">
+                <span class="lbl">Days on Market</span>
+                <div class="val"><span data-count="66.6">0</span><sup>d</sup></div>
+                <span class="delta">-20% vs prior 12</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="block hiw-block">
+    <div class="block-inner">
+        <div class="block-eyebrow reveal">How the ZenList valuation tool works</div>
+        <h2 class="reveal" style="transition-delay:0.05s;">Three minutes from your address<br>to <em>your true value</em>.</h2>
+
+        <div class="hiw-steps">
+            <div class="hiw-step reveal" style="transition-delay:0.10s;">
+                <div class="hiw-num">1</div>
+                <div class="hiw-h3">Enter your address</div>
+                <div class="hiw-text">Drop your address into the form above. We instantly pull 27,185 closed MLS sales + 2,400+ active private listings within a 5-mile radius.</div>
+            </div>
+            <div class="hiw-step reveal" style="transition-delay:0.15s;">
+                <div class="hiw-num">2</div>
+                <div class="hiw-h3">We model your comps</div>
+                <div class="hiw-text">Our valuation engine matches your home against 50+ attributes &mdash; lot size, year built, finished sqft, school district, walkability &mdash; including private network comps Zillow cannot see.</div>
+            </div>
+            <div class="hiw-step reveal" style="transition-delay:0.20s;">
+                <div class="hiw-num">3</div>
+                <div class="hiw-h3">Subscribe to unlock the full valuation</div>
+                <div class="hiw-text">Confirm your free ZenList subscription via text/email. Inside the app, see your full valuation, the comp set we used, and every private listing nearby.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ CLOSER / CTA ═══════════════ -->
+<section class="block closer-block">
+    <div class="block-inner">
+        <div class="block-eyebrow reveal">Don't price off a partial picture.</div>
+        <h2 class="reveal" style="transition-delay:0.05s;">See what your home is<br><em>really</em> worth.</h2>
+        <p class="lede reveal" style="transition-delay:0.10s; margin-left:auto; margin-right:auto;">
+            Free for North Shore homeowners. Includes the private comp data the public sites can't access.
+            The most accurate North Shore valuation you'll find — and the only one that uses the full picture.
+        </p>
+
+        <div class="closer-form-card reveal" style="transition-delay:0.15s;">
+            <div class="hero-form-label">Step 1 of 1</div>
+            <div class="hero-form-title" style="font-size:22px;">Get your private valuation</div>
+
+            <form id="hv-form-2" onsubmit="handleValuation(event)">
+                <div class="field">
+                    <label class="field-label" for="hv2-address">Property address</label>
+                    <input type="text" id="hv2-address" name="property_address" placeholder="123 Whitmore Court, Lake Forest, IL" required>
+                </div>
+                <div class="field-row">
+                    <div class="field">
+                        <label class="field-label" for="hv2-first">First name</label>
+                        <input type="text" id="hv2-first" name="first_name" placeholder="Jane" required>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="hv2-last">Last name</label>
+                        <input type="text" id="hv2-last" name="last_name" placeholder="Smith" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="field-label" for="hv2-email">Email</label>
+                    <input type="email" id="hv2-email" name="email" placeholder="jane@example.com" required>
+                </div>
+                <div class="field">
+                    <label class="field-label" for="hv2-phone">Mobile</label>
+                    <input type="tel" id="hv2-phone" name="phone" placeholder="(847) 555-0100" required>
+                </div>
+                <button type="submit" class="form-submit">Get My Valuation →</button>
+                <div class="form-fineprint">
+                    Free for homeowners · Free ZenList subscription required · No spam · Unsubscribe anytime
+                </div>
+            </form>
+
+            <div class="form-success" id="hv-success-2">
+                <div class="form-success-icon">✓</div>
+                <h3>Your valuation is being built.</h3>
+                <p>Check your phone in the next few minutes — we'll text you a link to your private ZenList account.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="foot">
+    <div class="foot-inner">
+        <div class="foot-mark">
+            <span class="nav-logo-mark">Z</span> ZenList
+        </div>
+        <div class="foot-text">
+            The ZenList private valuation is provided at no cost through licensed real estate professionals.<br>
+            Brokerage services provided by Jameson Sotheby's International Realty &middot; 55 E Erie St, Chicago, IL 60611
+        </div>
+        <div class="foot-text">
+            Licensed agent: Patrick Milhaupt, Associate Broker &middot; IL License # [Your License Number]
+        </div>
+        <div class="foot-legal">
+            <a href="https://zenlist.com">ZenList.com</a> &middot;
+            <a href="https://zenlist.com/privacy">Privacy Policy</a> &middot;
+            <a href="https://zenlist.com/terms">Terms of Service</a> &middot;
+            <a href="/">Buyer access</a>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+(function() {
+    'use strict';
+
+    const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/5586524/uxat7t5/';
+
+    // ─── UTM CAPTURE ───
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    const utmData = {};
+    utmKeys.forEach(k => { if (params.get(k)) utmData[k] = params.get(k); });
+    if (Object.keys(utmData).length > 0) window.__utmData = utmData;
+
+    // ─── FORM SUBMISSION ───
+    window.handleValuation = async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const card = form.closest('.hero-form-card, .closer-form-card');
+        const success = card.querySelector('.form-success');
+        const btn = form.querySelector('.form-submit');
+        const originalText = btn.textContent;
+
+        const data = new FormData(form);
+        const payload = Object.fromEntries(data.entries());
+
+        // Tag this as a HOME VALUATION lead for separate tracking
+        payload.lead_type = 'home_value';
+        payload.source = 'zenlist.realestate/home-value';
+        payload.page = 'home-value';
+        if (window.__utmData) payload.utm = window.__utmData;
+        payload.timestamp = new Date().toISOString();
+
+        btn.disabled = true;
+        btn.textContent = 'Building your valuation…';
+
+        try {
+            // CORS-safe form-encoded submission — no preflight, Zapier auto-parses fields
+            const formBody = new URLSearchParams();
+            Object.entries(payload).forEach(([k, v]) => {
+                formBody.append(k, typeof v === 'object' ? JSON.stringify(v) : String(v));
+            });
+            const res = await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formBody.toString()
+            });
+            if (!res.ok) throw new Error('Webhook error: ' + res.status);
+
+            // Fire Google Ads conversion — DIFFERENT EVENT NAME so home-value is tracked separately
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'home_value_lead', {
+                    send_to: 'AW-622008092',
+                    value: 75,
+                    currency: 'USD'
+                });
+            }
+
+            form.style.display = 'none';
+            success.classList.add('shown');
+        } catch (err) {
+            console.error('Submission error:', err);
+            btn.disabled = false;
+            btn.textContent = originalText;
+            alert('Something went wrong. Please try again or call us directly at 847.849.9828.');
+        }
+    };
+
+    // ─── NAV SCROLL STATE ───
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ─── REVEAL ON SCROLL ───
+    const revealObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in');
+                revealObs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // ─── NUMBER COUNT-UP ───
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+    function animateCount(el) {
+        const target = parseFloat(el.dataset.count);
+        const decimals = (el.dataset.count.split('.')[1] || '').length;
+        const dur = 1300;
+        const start = performance.now();
+        function tick(now) {
+            const t = Math.min(1, (now - start) / dur);
+            const v = target * easeOut(t);
+            el.textContent = decimals > 0 ? v.toFixed(decimals) : Math.round(v).toLocaleString();
+            if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+    const countObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                animateCount(e.target);
+                countObs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+    // ─── SMOOTH SCROLL ───
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const t = document.querySelector(this.getAttribute('href'));
+            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+})();
+</script>
+</body>
+</html>
